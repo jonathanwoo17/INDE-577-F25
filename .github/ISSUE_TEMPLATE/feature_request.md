@@ -3,7 +3,7 @@ name: 💡 Feature Request
 about: Propose a new feature, algorithm, or documentation for "INDE-577-F25"
 title: "[Feature]"
 labels: enhancement
-assignees: <your-profile-name>
+assignees: jonathanwoo17
 ---
 
 ### ✨ Feature Summary
