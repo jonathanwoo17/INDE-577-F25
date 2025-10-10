@@ -20,7 +20,7 @@ These notebooks serve as an educational sandbox for:
 
 ## Contents
 
-The following algorithms are currently included"
+The following algorithms are currently included:
 
 - The Perceptron
 - xxx
@@ -31,18 +31,14 @@ The following algorithms are currently included"
 
 ### Perceptron
 
-The Perceptron is one of the earliest linear classifiers, introduced by Frank Rosenblatt in 1958. It learns a hyperplane that separates two classes using iterative weight updates. For each data point \( (x_i, y_i) \) with \( y_i \in \{-1, +1\} \), predictions are made as:
+The Perceptron is one of the earliest linear classifiers, introduced by Frank Rosenblatt in 1958. It learns a hyperplane that separates two classes using iterative weight updates. For each data point (xᵢ, yᵢ) with yᵢ ∈ {−1, +1}, predictions are made as:
 
-\[
-\hat{y}_i = \text{sign}(w^T x_i + b)
-\]
+**ŷᵢ = sign(wᵀxᵢ + b)**
 
-If a sample is misclassified (\( y_i (w^T x_i + b) \le 0 \)), the model updates:
+If a sample is misclassified (yᵢ(wᵀxᵢ + b) ≤ 0), the model updates:
 
-\[
-w \leftarrow w + \eta y_i x_i, \quad b \leftarrow b + \eta y_i
-\]
+**w ← w + ηyᵢxᵢ**, **b ← b + ηyᵢ**
 
-where \( \eta \) is the learning rate. This process shifts the decision boundary toward misclassified samples until convergence.
+where η is the learning rate. This process shifts the decision boundary toward misclassified samples until convergence.
 
 The Perceptron works well for linearly separable data and is often used to introduce the fundamentals of supervised learning and neural network concepts.
