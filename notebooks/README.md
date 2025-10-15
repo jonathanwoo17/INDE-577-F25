@@ -29,7 +29,7 @@ The following algorithms are currently included:
 
 ## Overview of Included Algorithms
 
-### Perceptron
+### 1: Perceptron
 
 The Perceptron is one of the earliest linear classifiers, introduced by Frank Rosenblatt in 1958. It learns a hyperplane that separates two classes using iterative weight updates. For each data point (xᵢ, yᵢ) with yᵢ ∈ {−1, +1}, predictions are made as:
 

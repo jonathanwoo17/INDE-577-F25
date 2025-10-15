@@ -1,3 +1,23 @@
+"""
+perceptron.py
+--------------
+
+This module implements a simple binary linear Perceptron classifier from scratch 
+using NumPy. The Perceptron algorithm is one of the earliest and most fundamental 
+supervised learning algorithms for classification. It iteratively updates a weight 
+vector to find a linear decision boundary that separates two classes.
+
+The module also includes optional visualization utilities using Matplotlib and 
+Seaborn for exploratory analysis and model evaluation.
+
+Dependencies
+------------
+- numpy
+- pandas
+- matplotlib
+- seaborn
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
