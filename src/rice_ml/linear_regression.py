@@ -70,35 +70,37 @@ class SingleNeuron:
         z = np.dot(X, self.w_[:-1]) + self.w_[-1]
         return self.activation_function(z)
     
-def prepare_data(self, df):
-    """
-    Prepare feature and target arrays for linear regression.
+    def prepare_data(self, df):
+        """
+        Prepare feature and target arrays for linear regression.
 
-    Converts the DataFrame's feature (vector) column into a 2D NumPy array
-    and ensures that the target column contains numeric values.
+        Converts the DataFrame's feature (vector) column into a 2D NumPy array
+        and ensures that the target column contains numeric values.
 
-    Parameters
-    ----------
-    df : pd.DataFrame
-        Input DataFrame containing at least the feature and target columns.
+        Parameters
+        ----------
+        df : pd.DataFrame
+            Input DataFrame containing at least the feature and target columns.
 
-    Returns
-    -------
-    X : np.ndarray
-        2D array of feature vectors, shape (n_samples, n_features).
-    y : np.ndarray
-        1D array of numeric target values, shape (n_samples,).
-    """
-    # Convert vector column to 2D NumPy array
-    X = np.vstack(df[self.vector_col].apply(np.asarray).to_numpy())
+        Returns
+        -------
+        X : np.ndarray
+            2D array of feature vectors, shape (n_samples, n_features).
+        y : np.ndarray
+            1D array of numeric target values, shape (n_samples,).
+        """
+        # Convert vector column to 2D NumPy array
+        X = np.vstack(df[self.vector_col].apply(np.asarray).to_numpy())
 
-    # Extract target values
-    y = df[self.target_col].to_numpy()
+        # Extract target values
+        y = df[self.target_col].to_numpy()
 
-    # Validate numeric targets
-    if not np.issubdtype(y.dtype, np.number):
-        raise ValueError("Linear regression requires numeric target values.")
+        # Validate numeric targets
+        if not np.issubdtype(y.dtype, np.number):
+            raise ValueError("Linear regression requires numeric target values.")
 
-    return X, y
+        return X, y
+        
+
     
 
