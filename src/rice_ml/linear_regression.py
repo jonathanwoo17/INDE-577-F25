@@ -22,6 +22,9 @@ class SingleNeuron:
     def __init__(self, activation_function=lambda x: x):
         self.activation_function = activation_function
 
+        self.vector_col = None
+        self.target_col = None
+
     def train(self, X, y, alpha=0.01, epochs=100, random_state=None):
         """
         Train the neuron using stochastic gradient descent (SGD).
