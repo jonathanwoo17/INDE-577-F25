@@ -42,3 +42,25 @@ If a sample is misclassified (yᵢ(wᵀxᵢ + b) ≤ 0), the model updates:
 where η is the learning rate. This process shifts the decision boundary toward misclassified samples until convergence.
 
 The Perceptron works well for linearly separable data and is often used to introduce the fundamentals of supervised learning and neural network concepts.
+
+### 2: Linear Regression and Stochastic Gradient Descent
+
+Linear Regression aims to find the best-fitting line that minimizes the difference between predicted and actual values in continuous output data. Unlike the Perceptron, which performs classification, linear regression predicts a real-valued output ŷ given an input vector x by modeling a linear relationship:
+
+ŷᵢ = wᵀxᵢ + b
+
+The objective is to minimize the Mean Squared Error (MSE) between predictions and actual targets:
+
+L(w, b) = (1 / n) Σ (yᵢ − ŷᵢ)²
+
+Using stochastic gradient descent (SGD), parameters are updated incrementally for each sample to reduce the loss:
+
+w ← w − η ∂L/∂w, b ← b − η ∂L/∂b
+
+where the partial derivatives are given by:
+
+∂L/∂w = −2xᵢ(yᵢ − ŷᵢ), ∂L/∂b = −2(yᵢ − ŷᵢ)
+
+and η again represents the learning rate. This iterative update rule gradually adjusts the model parameters to minimize prediction errors across the dataset.
+
+Linear regression with SGD is widely used due to its simplicity, scalability to large datasets, and interpretability, making it a foundational method in both machine learning and statistics.
