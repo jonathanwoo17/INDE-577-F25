@@ -2,7 +2,14 @@
 import numpy as np
 import pytest
 
-from rice_ml import metrics
+from rice_ml.metrics import (
+    euclidean_distance,
+    manhattan_distance,
+    pairwise_euclidean,
+    pairwise_distances,
+    classification_error,
+    mean_squared_error,
+)
 
 
 # ------------------------- Distance primitives -------------------------
