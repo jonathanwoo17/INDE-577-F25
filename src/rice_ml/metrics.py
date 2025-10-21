@@ -31,7 +31,6 @@ def manhattan_distance(x: np.ndarray, y: np.ndarray) -> float:
     return float(np.sum(np.abs(x - y)))
 
 
-# Optionally expose a vectorized helper for speed in custom uses
 def pairwise_euclidean(A: np.ndarray, B: np.ndarray) -> np.ndarray:
     """
     Efficient pairwise Euclidean distances using (a-b)^2 = a^2 + b^2 - 2ab.
