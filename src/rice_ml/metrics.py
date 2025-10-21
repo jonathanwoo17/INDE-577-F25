@@ -32,26 +32,24 @@ def manhattan_distance(x: np.ndarray, y: np.ndarray) -> float:
 
 
 def pairwise_euclidean(A: np.ndarray, B: np.ndarray) -> np.ndarray:
-    """
-    Efficient pairwise Euclidean distances using (a-b)^2 = a^2 + b^2 - 2ab.
-
-    Parameters
-    ----------
-    A : np.ndarray, shape (n_a, d)
-    B : np.ndarray, shape (n_b, d)
-
-    Returns
-    -------
-    D : np.ndarray, shape (n_a, n_b)
-    """
     A = np.asarray(A, dtype=float)
     B = np.asarray(B, dtype=float)
-    A2 = np.sum(A**2, axis=1, keepdims=True)
-    B2 = np.sum(B**2, axis=1, keepdims=True).T
-    D2 = A2 + B2 - 2.0 * A @ B.T
-    # numerical guard
+
+    # Use the ||a||^2 + ||b||^2 - 2 a·b identity
+    A2 = np.sum(A * A, axis=1)[:, None]          # (n, 1)
+    B2 = np.sum(B * B, axis=1)[None, :]          # (1, m)
+    D2 = A2 + B2 - 2.0 * (A @ B.T)               # (n, m)
+
+    # Numerical cleanup: tiny negatives -> 0
     np.maximum(D2, 0.0, out=D2)
-    return np.sqrt(D2, out=D2)
+
+    D = np.sqrt(D2)
+
+    # If comparing a matrix to itself, force exact zeros on the diagonal
+    if A is B:
+        np.fill_diagonal(D, 0.0)
+
+    return D
 
 
 def pairwise_distances(
