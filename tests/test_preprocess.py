@@ -95,7 +95,7 @@ def test_standardize_fit_basic_and_zero_variance_handling():
     # other std values
     # For col0: std population of [1,3,5] is sqrt(((4+0+4)/3)) = sqrt(8/3)
     # For col2: [2,6,10] -> same pattern -> sqrt(8/3)
-    np.testing.assert_allclose(std[[0, 2]], np.sqrt(8/3))
+    np.testing.assert_allclose(std[[0, 2]], [np.sqrt(8/3), np.sqrt(32/3)])
 
 
 def test_standardize_transform_produces_zero_mean_unit_var_when_possible():
