@@ -9,7 +9,7 @@ Dependencies
 - numpy
 """
 
-from typing import Iterable
+from typing import Iterable, Callable
 import numpy as np
 
 
