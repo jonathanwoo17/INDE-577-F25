@@ -2,7 +2,7 @@
 import numpy as np
 import pytest
 
-from rice_ml import postprocess as pp
+from rice_ml.supervised_learning import postprocess as pp
 
 
 # ---------------------------

@@ -2,7 +2,7 @@
 import numpy as np
 import pytest
 
-from rice_ml.metrics import (
+from rice_ml.supervised_learning.metrics import (
     euclidean_distance,
     manhattan_distance,
     pairwise_euclidean,

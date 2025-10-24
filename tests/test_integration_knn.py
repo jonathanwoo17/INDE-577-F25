@@ -2,10 +2,10 @@
 import numpy as np
 import pytest
 
-from rice_ml.knn import KNN
-from rice_ml import metrics as met
-from rice_ml import preprocess as pre
-from rice_ml import postprocess as post
+from rice_ml.supervised_learning.knn import KNN
+from rice_ml.supervised_learning import metrics as met
+from rice_ml.supervised_learning import preprocess as pre
+from rice_ml.supervised_learning import postprocess as post
 
 
 # ---------------------------
