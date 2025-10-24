@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from rice_ml.perceptron import Perceptron
+from rice_ml.supervised_learning.perceptron import Perceptron
 
 
 # -------------------------
@@ -45,9 +45,7 @@ def three_class_df():
     return pd.DataFrame({"x": xs, "y": ys})
 
 
-# -------------------------
-# Tests
-# -------------------------
+# ---------- Tests ----------
 
 def test_prepare_data_binary_and_label_maps(separable_df):
     p = Perceptron()
