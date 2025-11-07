@@ -2,7 +2,7 @@
 preprocess.py
 -------------
 
-Utility functions for splitting data and scaling/normalization.
+Utility functions for splitting data, scaling/normalization, and image flattening.
 
 Dependencies
 ------------
@@ -103,3 +103,31 @@ def minmax_transform(X: np.ndarray, min_: np.ndarray, range_: np.ndarray) -> np.
     """
     X = np.asarray(X, dtype=float)
     return (X - min_) / range_
+
+def flatten_images(images: np.ndarray) -> np.ndarray:
+    """
+    Flatten a batch of images into 2D feature vectors.
+
+    This version strictly requires a NumPy array as input. It will raise
+    a TypeError if a list or other type is passed, enforcing consistent
+    preprocessing before model training.
+
+    Parameters
+    ----------
+    images : np.ndarray
+        Image data of shape (n_samples, height, width)
+        or (n_samples, height, width, channels).
+
+    Returns
+    -------
+    X : np.ndarray, shape (n_samples, n_features)
+        2D array where each row is a flattened image.
+    """
+    if not isinstance(images, np.ndarray):
+        raise TypeError(
+            f"Expected input of type np.ndarray, got {type(images).__name__}"
+        )
+
+    n_samples = images.shape[0]
+    X = images.reshape(n_samples, -1).astype(float)
+    return X
