@@ -1,4 +1,20 @@
+"""
+linear_regression.py
+--------------------
 
+This module implements a simple single-neuron linear regression model from scratch 
+using NumPy. The model learns to approximate a linear relationship between input 
+features and a continuous target variable through stochastic gradient descent (SGD).
+
+The implementation provides methods for training, prediction, and data preparation 
+from pandas DataFrames. The class is designed for educational and experimental 
+purposes to illustrate the mechanics of linear regression and gradient-based learning 
+without relying on external machine learning libraries.
+
+Dependencies
+------------
+- numpy
+"""
 
 import numpy as np
 
