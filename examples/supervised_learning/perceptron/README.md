@@ -18,7 +18,3 @@ If a sample is misclassified (yᵢ(wᵀxᵢ + b) ≤ 0), the model updates:
 where η is the learning rate. This process shifts the decision boundary toward misclassified samples until convergence.
 
 The Perceptron works well for linearly separable data and is often used to introduce the fundamentals of supervised learning and neural network concepts.
-
----
-
-## Data
