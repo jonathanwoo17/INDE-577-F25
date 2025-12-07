@@ -1,3 +1,19 @@
+"""
+neural_network.py
+-----------------
+
+Implementation of a simple fully connected neural network
+(AKA a multilayer perceptron) for supervised learning tasks.
+
+The network is built from dense layers with optional nonlinear
+activations and is trained using gradient descent.
+
+Dependencies
+------------
+- numpy
+
+"""
+
 import numpy as np
 from typing import Optional, Tuple, List, Literal
 
