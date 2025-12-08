@@ -7,10 +7,12 @@ Utility functions for splitting data, scaling/normalization, and image flattenin
 Dependencies
 ------------
 - numpy
+- pandas
 """
 
 from typing import Tuple, Optional
 import numpy as np
+import pandas as pd
 
 
 def train_test_split(
