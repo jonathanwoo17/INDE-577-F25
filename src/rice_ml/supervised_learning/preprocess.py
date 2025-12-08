@@ -131,3 +131,42 @@ def flatten_images(images: np.ndarray) -> np.ndarray:
     n_samples = images.shape[0]
     X = images.reshape(n_samples, -1).astype(float)
     return X
+
+def make_xy_dataframe(
+    X: np.ndarray,
+    y: np.ndarray,
+    vector_col: str = "x",
+    label_col: str = "y",
+) -> pd.DataFrame:
+    """
+    Convenience helper to wrap feature matrix X and label vector y
+    into a DataFrame suitable for models that expect a vector column
+    and a label column (e.g., LogisticRegression, Perceptron).
+
+    Parameters
+    ----------
+    X : np.ndarray of shape (n_samples, n_features)
+        Feature matrix.
+    y : np.ndarray of shape (n_samples,)
+        Label vector.
+    vector_col : str, default="x"
+        Name of the column that will store feature vectors.
+    label_col : str, default="y"
+        Name of the column that will store labels.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with two columns: `vector_col` (NumPy vectors) and
+        `label_col` (labels).
+    """
+    X = np.asarray(X)
+    y = np.asarray(y)
+
+    if X.shape[0] != y.shape[0]:
+        raise ValueError("X and y must have the same number of rows.")
+
+    return pd.DataFrame({
+        vector_col: list(X),
+        label_col: y,
+    })
