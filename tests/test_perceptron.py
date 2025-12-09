@@ -1,3 +1,14 @@
+import sys
+from pathlib import Path
+
+# Start at the current directory
+root = Path().resolve()
+
+while not (root / "src" / "rice_ml").exists() and root != root.parent:
+    root = root.parent
+
+sys.path.append(str(root / "src"))
+
 import numpy as np
 import pandas as pd
 import pytest
