@@ -93,6 +93,12 @@ def classification_error(y_true, y_pred):
         Classification error, a value between 0.0 (perfect predictions)
         and 1.0 (all predictions incorrect).
     """
+    if y_true.shape != y_pred.shape:
+        raise ValueError("y_true and y_pred must have the same shape.")
+
+    if y_true.size == 0:
+        return np.nan
+    
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
     return 1 - np.mean(y_true == y_pred)
@@ -120,4 +126,12 @@ def mean_squared_error(y_true, y_pred):
     """
     y_true = np.asarray(y_true, dtype=float)
     y_pred = np.asarray(y_pred, dtype=float)
-    return np.mean((y_true - y_pred) ** 2)
+
+    if y_true.shape != y_pred.shape:
+        raise ValueError("y_true and y_pred must have the same shape.")
+
+    if y_true.size == 0:
+        return np.nan
+
+    diff = y_true - y_pred
+    return float(np.mean(diff ** 2))
