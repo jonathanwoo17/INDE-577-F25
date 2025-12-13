@@ -23,7 +23,7 @@ class DBScan:
 
     This version:
     - Uses 1-indexed cluster labels: 1, 2, ..., n_clusters.
-    - Assigns all outliers (noise points) the label n_clusters + 1.
+    - Assigns all outliers (noise points) the label 0.
     - Returns both the labels and the number of clusters from `fit_predict`.
 
     Parameters
