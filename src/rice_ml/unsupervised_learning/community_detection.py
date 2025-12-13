@@ -184,8 +184,13 @@ class community_detection:
         Each vertex starts with a unique non-negative integer label.
         The initial label assigned to vertex ``v`` is its index in the
         original vertex list (0..n-1).
+
+        Returns:
+            self._labels: dict
+            Maps each verticies to a unique initial label
         """
         self._labels = {v: self._vertex_to_index[v] for v in self._vertex_list}
+        return  self._labels
 
     # ------------------------------------------------------------------
     # Core algorithm
