@@ -13,7 +13,7 @@ authors = [
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
-dependencies = ["numpy", "matplotlib", "seaborn", "pandas", "sklearn", "requests"]
+dependencies = ["numpy", "matplotlib", "seaborn", "pandas", "scikit-learn", "requests"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
