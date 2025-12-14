@@ -16,6 +16,6 @@ __all__ = [
     "metrics",
     "preprocess",
     "postprocess",
-    "decision_tree"
+    "decision_tree",
     "regression_tree"
 ]
