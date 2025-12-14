@@ -1,13 +1,19 @@
 """
-label_propagation.py
+community_detection.py
 
 Implementation of the Label Propagation algorithm for community detection
 on an undirected graph G = (V, E).
 
 This version enforces that labels are always non-negative integers, even if
 the input vertices are strings or other hashable types. It also provides a
-convenience method to return an n×1 vector of community labels in the
+convenience method to return an nx1 vector of community labels in the
 original vertex order.
+
+Dependencies
+------------
+- numpy
+- typing
+
 """
 
 from __future__ import annotations

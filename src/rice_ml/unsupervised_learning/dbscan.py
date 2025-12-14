@@ -11,7 +11,9 @@ Dependencies
 ------------
 - numpy
 - pandas
-- matplotlib
+- typing
+- euclidean_distance, manhattan_distance from rice_ml.supervised_learning.metrics
+
 """
 
 

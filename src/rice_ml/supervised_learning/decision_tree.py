@@ -17,6 +17,12 @@ The implementation includes:
 - Feature subsampling support (useful for random-forest-style experiments)
 - Prediction of class labels and class probabilities
 - Information-gain-based feature importance estimation
+
+Dependencies
+------------
+- numpy
+- typing
+
 """
 
 

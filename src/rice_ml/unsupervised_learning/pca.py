@@ -3,6 +3,12 @@ Principal Component Analysis (scikit-learn backend).
 
 This module provides a simple PCA implementation with a NumPy-style API,
 internally using scikit-learn for numerical robustness.
+
+Dependencies
+------------
+- numpy
+- sklearn
+- typing
 """
 
 from __future__ import annotations
