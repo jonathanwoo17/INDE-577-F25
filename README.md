@@ -6,6 +6,7 @@ In this repository, we implement a machine learning package that includes KNN, l
 # Authors
 Jonathan Woo
 jjw11@rice.edu
+
 Vikram Shah
 vs56@rice.edu/ vikramshah1108@gmail.com
 
@@ -24,8 +25,6 @@ This repository contains an machine learning toolkit called `rice_ml` which impl
 3. Install the package and core dependencies:
    `pip install -e .`
 
-4. (Optional) Install development dependencies for testing:
-   `pip install -e .[dev]`
 
 ## Repository Structure
 ```
@@ -43,7 +42,7 @@ INDE-577-F25-VS/
 ```
 
 ## Usage
-After installation, import algorithms directly from the package:
+After installation, import algorithms directly from the package. Here is an example:
 ```python
 from rice_ml.supervised_learning.knn import KNNClassifier
 from rice_ml.unsupervised_learning.k_means_clustering import KMeansClustering
@@ -53,7 +52,7 @@ model = KNNClassifier(k=5)
 Refer to the `examples/` folder for runnable walkthroughs tailored to each algorithm.
 
 ## Testing
-Run the full test suite with pytest:
+Run the full test suite with pytest. Run the following command in the root directory of this repository:
 ```bash
 pytest tests/
 ```
