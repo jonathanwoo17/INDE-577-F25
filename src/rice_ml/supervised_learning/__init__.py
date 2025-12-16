@@ -2,6 +2,7 @@ from .knn import KNN
 from .linear_regression import SingleNeuron
 from .perceptron import Perceptron
 from .decision_tree import decision_tree
+from .ensemble_methods import bagging_classifier
 from .regression_tree import regression_tree
 
 # import all helper modules
@@ -17,5 +18,6 @@ __all__ = [
     "preprocess",
     "postprocess",
     "decision_tree",
-    "regression_tree"
+    "bagging_classifier",
+    "regression_tree",
 ]

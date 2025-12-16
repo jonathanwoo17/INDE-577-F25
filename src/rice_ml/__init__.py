@@ -16,6 +16,8 @@ from .supervised_learning.preprocess import train_test_split, standardize_fit, s
 from .supervised_learning.regression_tree import regression_tree
 from .unsupervised_learning.pca import pca
 
+from .supervised_learning.ensemble_methods import bagging_classifier
+
 __all__ = [
     "decision_tree",
     "KNN",
@@ -41,7 +43,8 @@ __all__ = [
     "DBScan",
     "community_detection",
     "k_means_clustering",
-    "pca"
+    "pca",
+    "bagging_classifier"
 ]
 
 
