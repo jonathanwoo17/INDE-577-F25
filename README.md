@@ -11,7 +11,7 @@ Vikram Shah
 vs56@rice.edu/ vikramshah1108@gmail.com
 
 ## Overview
-This repository contains an machine learning toolkit called `rice_ml` which implements supervised and unsupervised learning algorithms.
+This repository contains a machine learning toolkit called `rice_ml` which implements supervised and unsupervised learning algorithms.
 
 ## Features
 - **Supervised learning**: k-nearest neighbors, linear and logistic regression, perceptron, feedforward neural network, decision trees, and regression trees.
@@ -28,7 +28,7 @@ This repository contains an machine learning toolkit called `rice_ml` which impl
 
 ## Repository Structure
 ```
-INDE-577-F25-VS/
+INDE-577-F25/
 ├── data/                      # Sample datasets 
 ├── examples/                  # Usage walkthroughs for supervised and unsupervised algorithms
 ├── src/

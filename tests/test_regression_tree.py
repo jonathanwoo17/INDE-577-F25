@@ -20,3 +20,4 @@ def test_regression_tree_fits_piecewise_constant():
 
     preds = reg.predict(np.array([[0.5], [2.5]])).ravel()
     assert np.allclose(preds, np.array([1.0, 3.0]), atol=0.1)
+
