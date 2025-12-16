@@ -22,3 +22,20 @@ def test_pca_reduces_dimension_and_variance_ordering():
 
     assert transformed.shape == (4, 1)
     assert model.explained_variance_ratio_[0] > 0.9
+
+
+def test_pca_transform_requires_fit():
+    model = pca(n_components=1, scale=True)
+    with pytest.raises(RuntimeError):
+        model.transform(np.array([[1.0, 2.0]]))
+
+
+def test_pca_scaling_tracks_feature_mean():
+    X = np.array([[1, 2], [3, 4], [5, 6]], dtype=float)
+
+    model = pca(n_components=2, scale=True)
+    transformed = model.fit_transform(X)
+
+    assert transformed.shape[1] == 2
+    assert np.allclose(model.mean_, np.array([3.0, 4.0]))
+    assert np.isclose(np.sum(model.explained_variance_ratio_), 1.0)

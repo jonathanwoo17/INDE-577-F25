@@ -50,5 +50,3 @@ def test_empty_graph_returns_no_labels():
     detector = community_detection([], [], max_iters=10, epsilon=0.1)
     assert detector.run(seed=999) == {}
     assert detector.get_communities() == {}
-
-
