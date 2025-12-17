@@ -22,7 +22,6 @@ fraud detection, and image recognition.
 ---
 
 ## Overview of Included Algorithms
-
 - The Perceptron
 - Logistic Regression
 - Linear Regression

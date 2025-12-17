@@ -27,7 +27,6 @@ Unsupervised learning problems are commonly grouped into the following categorie
   (e.g. visualization, noise reduction, feature extraction).
 
 ## Overview of Included Algorithms
-Some widely used unsupervised learning algorithms include:
 - K-Means Clustering
 - DBSCAN
 - Principal Component Analysis (PCA)

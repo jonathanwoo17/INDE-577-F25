@@ -23,3 +23,17 @@ These notebooks serve as an educational sandbox for:
 Algorithms are separated into two types, structured learning and unstructured learning. 
 More information about the two types of algorithms and the individual algorithms themselves 
 can be found in the respective subdirectories.
+
+## Overview of Included Algorithms
+- The Perceptron
+- Logistic Regression
+- Linear Regression
+- Multilayer Perceptron
+- K-Nearest Neighbors
+- Regression Trees
+- Decision Trees
+- Ensemble Methods
+- K-Means Clustering
+- DBSCAN
+- Principal Component Analysis (PCA)
+- Community Detection
